@@ -21,6 +21,7 @@ class UserController{
 
         // Add all routing middleware for user endpoints
         AraDTApp.post('/register', this.register);
+        AraDTApp.get('/register', this.getRegister);
         AraDTApp.post('/login', this.login);
         AraDTApp.get('/logout', this.logout);
         AraDTApp.get('/login', this.getLogin);
@@ -118,6 +119,9 @@ class UserController{
     getLogin(request, response, next) {
         response.render('login');
     }
+    getRegister(request, response, next) {
+        response.render('register');
+    }
     /* YOU NEED TO ADD COMMENTS FROM HERE ON */
 
     updateAccount =  async (request, response) => {
@@ -166,6 +170,7 @@ class UserController{
 
     };
 
+    // The request checks to see if the user is f
     getAccount(request, response){
         
         if (!request.session.token) {
