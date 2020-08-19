@@ -1,4 +1,5 @@
 var UserController = require('../controllers/UserController');
+var ChannelController = require('../controllers/ChannelController');
 var createError = require('http-errors');
 
 /**
@@ -41,12 +42,13 @@ class Router{
     }
 
 
-    /**
+   /**
      * Add controllers for key models, 
      * e.g. Users, Channels, Messages
      */
     addControllers() {
         var userController = new UserController();
+        var channelController = new ChannelController();
     }
 
     // Renders home page ./views/index.ejs
