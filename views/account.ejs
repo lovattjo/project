@@ -1,11 +1,28 @@
 <%- include('partials/header'); %> 
 <form action="/account" method="post" enctype="multipart/form-data">
-    <input type="text" name="displayName" placeholder="Display Name" value=" <%= locals.user.displayName %>">
-    <input type="email" name="email" placeholder="Email" value=" <%= locals.user.email %>">
-    <input type="file" name="avatar">
-      <button type="submit">Update</button>
-	<input type="password" name="password" placeholder="Password" value=" <%= locals.user.password %>">
-	<input type="password" name="passwordConfirm" placeholder="Confirm Password" value=" <%= locals.user.passwordConfirm %>">
-	<button type="submit">Update Password</button>
-</form>
-  <%- include('partials/footer'); %>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Username</label>
+    <input type="text" class="form-control" id="displayName" name="displayName" placeholder="Display Name" value=" <%= locals.user.displayName %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email" value=" <%= locals.user.email %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">avatar</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="avatar">
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+  <form action="/password" method="post">  
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">passwordConfirm</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="passwordConfirm" placeholder="Confirm Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>  
+<%- include('partials/footer'); %>
