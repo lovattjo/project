@@ -4,6 +4,11 @@ var channels = locals.channels
 var owned = ("owned" in  channels) ? channels.owned : false
 var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 %>
+<% if (locals.errors && locals.errors.channels.general) { %>
+	<% locals.errors.channels.general.forEach(function(error) { %>
+		<p class="alert alert-primary" role="alert"><%= error %></p>
+	<% }) %>
+<% } %>	
 <% var users = locals.channels.users %>
 <div id="owned-channels" class="user-channels">
 	<h4>Your Channels</h4>
