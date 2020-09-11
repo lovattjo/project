@@ -24,7 +24,6 @@ class UserController{
         AraDTApp.get('/register', this.getRegister);
         AraDTApp.post('/login', this.login);
         AraDTApp.get('/logout', this.logout);
-        AraDTApp.get('/login', this.getLogin);
         AraDTApp.get('/account', this.getAccount);
         AraDTApp.post('/account', this.updateAccount);
         AraDTApp.post('/password', this.updatePassword);
@@ -107,12 +106,12 @@ class UserController{
                 }).catch((error) => {
                     // Firebase registration has failed, so return Firebase errors
                     request.session.errors.register = [error.message];
-                    response.redirect('/');
+                    response.redirect('/register');
                 });
         } catch(errors) {
             // Form has failed validation, so return errors
             request.session.errors.register = errors;
-            response.redirect('/');
+            response.redirect('/register');
         }
     };
 

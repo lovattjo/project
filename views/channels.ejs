@@ -37,7 +37,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 							<% subscribed.forEach(function(channel) { %>
 								<li>
 									<img src="<%= channel.image %>" alt="<%= channel.name %>" width="125px">
-									<a href="/channel/<%= channel.slug %>/"><%= channel.name %></a>
+									<a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
 								</li>
 							<% }) %>
 							</ul>
