@@ -15,7 +15,7 @@
     <input type="text" class="form-control" id="displayName" name="displayName" placeholder="Display Name" value=" <%= locals.user.displayName %>">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
+    <label for="exampleInputEmail1">Email Address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email" value=" <%= locals.user.email %>">
   </div>
   <% if (locals.user.photoURL) { %>
@@ -24,18 +24,20 @@
     </p>
   <% } %>
   <div class="form-group">
-    <label for="exampleFormControlFile1">avatar</label>
+    <label for="exampleFormControlFile1">Avatar</label>
     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="avatar">
   </div>
+  <div class="form-group">
   <button type="submit" class="btn btn-primary">Update</button>
-  </form>
+  </div>
+</form>
   <form action="/password" method="post">  
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">passwordConfirm</label>
+    <label for="exampleInputPassword1">Password Confirm</label>
     <input type="password" class="form-control" id="exampleInputPassword1" name="passwordConfirm" placeholder="Confirm Password">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
